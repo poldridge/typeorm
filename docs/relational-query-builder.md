@@ -82,10 +82,10 @@ For `one-to-one` and `many-to-one` relations use `set` instead:
 ```typescript
 import {getConnection} from "typeorm";
 
-// this code sets category of a given post
+// this code sets the category of a given post
 await getConnection()
     .createQueryBuilder()
-    .relation(Post, "categories")
+    .relation(Post, "category")
     .of(post) // you can use just post id as well
     .set(category); // you can use just category id as well
 ```
